@@ -1,6 +1,6 @@
 package com.dev.usermanagement.Entity;
 
-import javax.persistence.Entiy;
+import javax.persistence.*;
 
 
 @Entity
