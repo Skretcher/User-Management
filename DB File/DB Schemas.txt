@@ -1,0 +1,19 @@
+create database usermanage;
+show databases;
+use usermanage;
+show tables;
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+INSERT INTO users (username, password, email)
+VALUES ('john_doe', 'password123', 'john@example.com'),
+       ('jane_smith', 'letmein', 'jane@example.com'),
+       ('admin', 'admin123', 'admin@example.com');
+       
+select * from users;
+

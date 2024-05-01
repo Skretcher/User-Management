@@ -1,5 +1,15 @@
 package com.dev.usermanagement.Repository;
 
-public class UserRepository {
+import com.dev.usermanagement.Entity.User;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.stereotype.Repository;
+
+@EnableJpaRepositories("com.dev.usermanagement.Repository")
+
+
+@Repository
+public interface UserRepository extends JpaRepository<User, Long> {
+    User findByUsername(String username);
 }
