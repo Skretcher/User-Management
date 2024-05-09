@@ -4,8 +4,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.dev.usermanagement.authentication.AuthService;
 import com.dev.usermanagement.model.User;
+import com.dev.usermanagement.repository.AuthService;
 import com.dev.usermanagement.service.UserService;
 
 import java.util.List;
