@@ -21,7 +21,7 @@ public class JwtUtil {
         return Base64.getEncoder().encodeToString(secretBytes);
     }
 
-    public static String generateToken(String email) {
+    public static String generateToken(String email , String SECRET_KEY) {
         return Jwts.builder()
                 .setSubject(email)
                 .setIssuedAt(new Date(System.currentTimeMillis()))
@@ -30,7 +30,7 @@ public class JwtUtil {
                 .compact();
     }
 
-    public static boolean validateToken(String token) {
+    public static boolean validateToken(String token, String SECRET_KEY) {
         try {
             Jwts.parser().setSigningKey(SECRET_KEY).parseClaimsJws(token);
             return true;

@@ -3,8 +3,8 @@ package com.dev.usermanagement.repository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import com.dev.usermanagement.model.User;
-import com.dev.usermanagement.util.JwtUtil;
+import com.dev.usermanagement.model.*;
+import com.dev.usermanagement.repository.util.*;
 
 @Service
 public class AuthService {
